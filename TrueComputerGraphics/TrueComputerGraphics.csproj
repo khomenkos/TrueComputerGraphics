@@ -31,6 +31,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IObject.cs" />
+    <Compile Include="Objects\Camera.cs" />
+    <Compile Include="Objects\Sphere.cs" />
+    <Compile Include="Objects\Plane.cs" />
+    <Compile Include="Objects\Light.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\Point.cs" />
