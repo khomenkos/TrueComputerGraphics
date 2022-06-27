@@ -5,6 +5,17 @@ VisualStudioVersion = 16.0.810.25
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueComputerGraphics", "TrueComputerGraphics\TrueComputerGraphics.csproj", "{806C97FE-10B7-4157-B60E-A2511B17625F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{AE887A34-CA91-4385-B583-0F6E0979AF6C}"
+	ProjectSection(SolutionItems) = preProject
+		IObject.cs = IObject.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Types", "Types", "{924E322E-A2C6-4015-B00B-5B145C04D67E}"
+	ProjectSection(SolutionItems) = preProject
+		Point.cs = Point.cs
+		Vector.cs = Vector.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|anycpu = Debug|anycpu
