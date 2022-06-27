@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using TrueComputerGraphics.Objects;
+using TrueComputerGraphics.Types;
 
 namespace TrueComputerGraphics.Objects
 {
-    class Light
+    public class Light
     {
         public Vector Direction { get; set; }
 

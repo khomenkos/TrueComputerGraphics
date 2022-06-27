@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using TrueComputerGraphics.Types;
 
 namespace TrueComputerGraphics.Objects
 {
-    class Camera
+    public class Camera
     {
         public Point Position { get; }
         public Vector Direction { get; }
@@ -40,5 +38,4 @@ namespace TrueComputerGraphics.Objects
             Up = Vector.Cross(direction, Vector.Negate(Right));
         }
     }
-}
 }

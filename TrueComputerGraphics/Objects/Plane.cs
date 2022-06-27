@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
-using TrueComputerGraphics.Interfaces;
 using TrueComputerGraphics.Types;
+using TrueComputerGraphics.Interfaces;
 
 namespace TrueComputerGraphics.Objects
 {
-    class Plane:IObject
+    public class Plane : IObject
     {
         public Point Center { get; }
         public Vector Normal { get; }

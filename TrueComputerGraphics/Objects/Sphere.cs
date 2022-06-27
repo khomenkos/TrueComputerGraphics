@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using TrueComputerGraphics.Interfaces;
 using TrueComputerGraphics.Types;
 
 namespace TrueComputerGraphics.Objects
 {
-    class Sphere:IObject
+    public class Sphere : IObject
     {
         public Point Center { get; }
         public float Radius { get; }

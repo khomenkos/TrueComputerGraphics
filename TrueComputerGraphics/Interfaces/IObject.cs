@@ -1,4 +1,7 @@
-﻿using TrueComputerGraphics.Types;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using TrueComputerGraphics.Types;
 
 namespace TrueComputerGraphics.Interfaces
 {

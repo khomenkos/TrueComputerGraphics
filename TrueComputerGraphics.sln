@@ -1,25 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.810.25
+VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueComputerGraphics", "TrueComputerGraphics\TrueComputerGraphics.csproj", "{806C97FE-10B7-4157-B60E-A2511B17625F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrueComputerGraphics", "TrueComputerGraphics\TrueComputerGraphics.csproj", "{EE23CB1C-D3DB-4CE4-8168-B18E250CFD2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|anycpu = Debug|anycpu
-		Release|anycpu = Release|anycpu
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{806C97FE-10B7-4157-B60E-A2511B17625F}.Debug|anycpu.ActiveCfg = Debug|anycpu
-		{806C97FE-10B7-4157-B60E-A2511B17625F}.Debug|anycpu.Build.0 = Debug|anycpu
-		{806C97FE-10B7-4157-B60E-A2511B17625F}.Release|anycpu.ActiveCfg = Release|anycpu
-		{806C97FE-10B7-4157-B60E-A2511B17625F}.Release|anycpu.Build.0 = Release|anycpu
+		{EE23CB1C-D3DB-4CE4-8168-B18E250CFD2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE23CB1C-D3DB-4CE4-8168-B18E250CFD2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE23CB1C-D3DB-4CE4-8168-B18E250CFD2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE23CB1C-D3DB-4CE4-8168-B18E250CFD2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {4C79B6A0-8474-48F7-9E74-1626E904EDF8}
+		SolutionGuid = {5FF35057-36DF-431D-B9C4-2F78CFAFC354}
 	EndGlobalSection
 EndGlobal
