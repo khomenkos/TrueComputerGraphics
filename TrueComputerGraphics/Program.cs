@@ -14,23 +14,19 @@ namespace TrueComputerGraphics
 
             Scene.Scene scene = new Scene.Scene(camera, light);
 
-            string path = " ";
+            string path = @"/Users/anymacstore/Downloads/Учеба/3 Курс - Семестр 2/Комп'ютерна графіка та обробка зображень/cow.obj";
             ComplexObject objectsasd = new ComplexObject(FileWorker.FileWorker.ReadObject(path));
+            objectsasd.RotateY(90);
+            objectsasd.RotateX(30);
+            objectsasd.Scale(2, 2, 2);
             scene.AddObjects(objectsasd.objects);
-
-            Sphere sphere = new Sphere(new Point(0, 0, 3), 1);
-            scene.AddObject(sphere);
-
-            Triangle triangle = new Triangle(new Point(0, 0, 30), new Point(-2, -2, 30), new Point(-2, 2, 3), new Vector(1, 0, -1), new Vector(1, 0, -1), new Vector(-1, 0, -1));
-            //Triangle triangle = new Triangle(new Point(0, 0, 0), new Point(-2, -2, 0), new Point(-2, 2, 0));
-            scene.AddObject(triangle);
 
             Plane plane = new Plane(new Point(-1, 0, 0), new Vector(1, 0, 0));
             scene.AddObject(plane);
 
             float[,] screen = scene.GetScreen();
 
-            string imagePath = " ";
+            string imagePath = @"/Users/anymacstore/Downloads/cow.ppm";
             FileWorker.FileWorker.WriteImage(imagePath, screen);
         }
     }

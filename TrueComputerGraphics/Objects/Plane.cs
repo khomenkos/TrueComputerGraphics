@@ -78,5 +78,17 @@ namespace TrueComputerGraphics.Objects
             Normal.RotateZ(degree);
             return this;
         }
+
+        public object Scale(float kx, float ky, float kz)
+        {
+            return this;
+        }
+
+        public object Translate(Vector direction)
+        {
+            Center.Translate(direction);
+            Normal.Translate(direction);
+            return this;
+        }
     }
 }

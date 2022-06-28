@@ -67,5 +67,21 @@ namespace TrueComputerGraphics.Types
             y = newY;
             return this;
         }
+
+        public object Translate(Vector direction)
+        {
+            x += direction.x;
+            y += direction.y;
+            z += direction.z;
+            return this;
+        }
+
+        public object Scale(float kx, float ky, float kz)
+        {
+            x *= kx;
+            y *= ky;
+            z *= kz;
+            return this;
+        }
     }
 }

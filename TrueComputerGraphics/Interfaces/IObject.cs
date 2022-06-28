@@ -18,5 +18,9 @@ namespace TrueComputerGraphics.Interfaces
         public object RotateY(float degree);
 
         public object RotateZ(float degree);
+
+        public object Scale(float kx, float ky, float kz);
+
+        public object Translate(Vector direction);
     }
 }

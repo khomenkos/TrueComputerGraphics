@@ -41,6 +41,24 @@ namespace TrueComputerGraphics.Objects
         }
 
 
+        public object Scale(float kx, float ky, float kz)
+        {
+            for (int i = 0; i < objects.Count; i++)
+            {
+                objects[i] = (IObject)objects[i].Scale(kx, ky, kz);
+            }
+            return this;
+        }
+
+        public object Translate(Vector direction)
+        {
+            for (int i = 0; i < objects.Count; i++)
+            {
+                objects[i].Translate(direction);
+            }
+            return this;
+        }
+
     }
 }
 

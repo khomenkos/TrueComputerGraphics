@@ -164,6 +164,22 @@ namespace TrueComputerGraphics.Objects
             vector3.RotateZ(degree);
             return this;
         }
+
+        public object Scale(float kx, float ky, float kz)
+        {
+            point1.Scale(kx, ky, kz);
+            point2.Scale(kx, ky, kz);
+            point3.Scale(kx, ky, kz);
+            return this;
+        }
+
+        public object Translate(Vector direction)
+        {
+            point1.Translate(direction);
+            point2.Translate(direction);
+            point3.Translate(direction);
+            return this;
+        }
     }
 }
 

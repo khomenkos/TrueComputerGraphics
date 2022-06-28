@@ -8,8 +8,8 @@ namespace TrueComputerGraphics.Objects
 {
     public class Sphere : IObject
     {
-        public Point Center { get; }
-        public float Radius { get; }
+        public Point Center { get; private set; }
+        public float Radius { get; set; }
 
         public Sphere(Point center, float radius)
         {
@@ -72,6 +72,18 @@ namespace TrueComputerGraphics.Objects
 
         public object RotateZ(float degree)
         {
+            return this;
+        }
+
+        public object Scale(float kx, float ky, float kz)
+        {
+            Radius = kx;
+            return this;
+        }
+
+        public object Translate(Vector direction)
+        {
+            Center = (Point)Center.Translate(direction);
             return this;
         }
     }
