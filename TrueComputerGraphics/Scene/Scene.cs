@@ -50,15 +50,22 @@ namespace TrueComputerGraphics.Scene
                 for (int y = 0; y < Camera.width; y++)
                 {
                     var ray = pixelCenter - Camera.Position;
-                    var result = TheNearest(Camera.Position, ray);
+                    var result = TheNearest(Camera.Position, ray, out Point IntersectionPoint, out IObject IntersectionObject);
 
                     if (result != null)
                     {
-                        screen[x, yIterator] = Vector.Negate(result) * light.Direction;
+                        var a = light.Direction * Vector.Negate(Vector.Normilize(result));
+
+                        if (isPointInShadow(IntersectionPoint, IntersectionObject))
+                        {
+                            a /= 2;
+                        }
+
+                        screen[x, yIterator] = a;
                     }
                     else
                     {
-                        screen[x, yIterator] = 0;
+                        screen[x, yIterator] = 255;
                     }
 
                     yIterator++;
@@ -70,11 +77,11 @@ namespace TrueComputerGraphics.Scene
             return screen;
         }
 
-        public Vector TheNearest(Point start, Vector vector)
+        public Vector TheNearest(Point start, Vector vector, out Point IntersectionPoint, out IObject IntersectionObject)
         {
             float minDistance = Int32.MaxValue;
-            IObject obj = null;
-            Point intercept = null;
+            IntersectionObject = null;
+            IntersectionPoint = null;
             for (int i = 0; i < objects.Count; i++)
             {
                 if (objects[i].IsInterceptionWithRay(start, vector))
@@ -84,16 +91,33 @@ namespace TrueComputerGraphics.Scene
                     if (distance < minDistance)
                     {
                         minDistance = distance;
-                        obj = objects[i];
-                        intercept = tempIntercept;
+                        IntersectionObject = objects[i];
+                        IntersectionPoint = tempIntercept;
                     }
                 }
             }
 
-            if (obj != null)
-                return obj.GetNormalOnPoint(intercept);
+            if (IntersectionObject != null)
+                return IntersectionObject.GetNormalOnPoint(IntersectionPoint);
 
             return null;
+        }
+
+        public bool isPointInShadow(Point startPoint, IObject startObject)
+        {
+            for (int i = 0; i < objects.Count; i++)
+            {
+                if (startObject == objects[i])
+                {
+                    continue;
+                }
+                if (objects[i].IsInterceptionWithRay(startPoint, Vector.Negate(light.Direction)))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

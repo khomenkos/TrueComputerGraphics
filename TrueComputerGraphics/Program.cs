@@ -16,15 +16,18 @@ namespace TrueComputerGraphics
             Sphere sphere = new Sphere(new Point(0, 0, 3), 1);
             scene.AddObject(sphere);
 
+            Triangle triangle = new Triangle(new Point(0, 0, 30), new Point(-2, -2, 30), new Point(-2, 2, 3), new Vector(1, 0, -1), new Vector(1, 0, -1), new Vector(-1, 0, -1));
+            //Triangle triangle = new Triangle(new Point(0, 0, 0), new Point(-2, -2, 0), new Point(-2, 2, 0));
+            scene.AddObject(triangle);
+
             Plane plane = new Plane(new Point(-1, 0, 0), new Vector(1, 0, 0));
             scene.AddObject(plane);
 
             float[,] screen = scene.GetScreen();
 
-            Triangle triangle = new Triangle(new Point(0, 0, 30), new Point(-2, -2, 30), new Point(-2, 2, 3), new Vector(1, 0, -1), new Vector(1, 0, -1), new Vector(-1, 0, -1));
-            //Triangle triangle = new Triangle(new Point(0, 0, 0), new Point(-2, -2, 0), new Point(-2, 2, 0));
 
-            scene.AddObject(triangle);
+
+
         }
     }
 }
