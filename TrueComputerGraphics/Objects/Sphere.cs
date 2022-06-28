@@ -60,5 +60,19 @@ namespace TrueComputerGraphics.Objects
         {
             return Vector.GetVectorWithPoints(Center, point);
         }
+        public object RotateX(float degree)
+        {
+            return this;
+        }
+
+        public object RotateY(float degree)
+        {
+            return this;
+        }
+
+        public object RotateZ(float degree)
+        {
+            return this;
+        }
     }
 }

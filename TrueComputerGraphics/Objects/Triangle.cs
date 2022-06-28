@@ -131,6 +131,39 @@ namespace TrueComputerGraphics.Objects
                 }
             }
         }
+        public object RotateX(float degree)
+        {
+            point1.RotateX(degree);
+            point2.RotateX(degree);
+            point3.RotateX(degree);
+            vector1.RotateX(degree);
+            vector2.RotateX(degree);
+            vector3.RotateX(degree);
+            return this;
+        }
+
+        public object RotateY(float degree)
+        {
+            point1.RotateY(degree);
+            point2.RotateY(degree);
+            point3.RotateY(degree);
+            vector1.RotateY(degree);
+            vector2.RotateY(degree);
+            vector3.RotateY(degree);
+            return this;
+        }
+
+        public object RotateZ(float degree)
+        {
+
+            point1.RotateZ(degree);
+            point2.RotateZ(degree);
+            point3.RotateZ(degree);
+            vector1.RotateZ(degree);
+            vector2.RotateZ(degree);
+            vector3.RotateZ(degree);
+            return this;
+        }
     }
 }
 

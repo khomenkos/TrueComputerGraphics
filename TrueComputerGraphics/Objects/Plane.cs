@@ -55,5 +55,28 @@ namespace TrueComputerGraphics.Objects
 
             return new Point(x, y, z);
         }
+        public object RotateX(float degree)
+        {
+            degree = (float)(degree * Math.PI / 180.0);
+            Center.RotateX(degree);
+            Normal.RotateX(degree);
+            return this;
+        }
+
+        public object RotateY(float degree)
+        {
+            degree = (float)(degree * Math.PI / 180.0);
+            Center.RotateY(degree);
+            Normal.RotateY(degree);
+            return this;
+        }
+
+        public object RotateZ(float degree)
+        {
+            degree = (float)(degree * Math.PI / 180.0);
+            Center.RotateZ(degree);
+            Normal.RotateZ(degree);
+            return this;
+        }
     }
 }

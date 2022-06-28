@@ -12,5 +12,11 @@ namespace TrueComputerGraphics.Interfaces
         public Point WhereInterceptionWithRay(Point start, Vector direction);
 
         public Vector GetNormalOnPoint(Point point);
+
+        public object RotateX(float degree);
+
+        public object RotateY(float degree);
+
+        public object RotateZ(float degree);
     }
 }

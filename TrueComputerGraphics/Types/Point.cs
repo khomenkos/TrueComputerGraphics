@@ -6,9 +6,9 @@ namespace TrueComputerGraphics.Types
 {
     public class Point
     {
-        public float x { get; }
-        public float y { get; }
-        public float z { get; }
+        public float x { get; private set; }
+        public float y { get; private set; }
+        public float z { get; private set; }
 
         public Point(float x, float y, float z)
         {
@@ -35,6 +35,37 @@ namespace TrueComputerGraphics.Types
             float deltaZ = pointTwo.z - pointOne.z;
 
             return (float)Math.Sqrt(deltaX * deltaX + deltaY * deltaY + deltaZ * deltaZ);
+        }
+        public object RotateX(float degree)
+        {
+            degree = (float)(degree * Math.PI / 180.0);
+            float newY = (float)(y * Math.Cos(degree) - z * Math.Sin(degree));
+            float newZ = (float)(y * Math.Sin(degree) + z * Math.Cos(degree));
+            y = newY;
+            z = newZ;
+            return this;
+
+        }
+
+        public object RotateY(float degree)
+        {
+            degree = (float)(degree * Math.PI / 180.0);
+            float newX = (float)(x * Math.Cos(degree) + z * Math.Sin(degree));
+            float newZ = (float)(z * Math.Cos(degree) - x * Math.Sin(degree));
+            x = newX;
+            z = newZ;
+            return this;
+        }
+
+        public object RotateZ(float degree)
+        {
+            degree = (float)(degree * Math.PI / 180.0);
+
+            float newX = (float)(x * Math.Cos(degree) - y * Math.Sin(degree));
+            float newY = (float)(y * Math.Cos(degree) + x * Math.Sin(degree));
+            x = newX;
+            y = newY;
+            return this;
         }
     }
 }
