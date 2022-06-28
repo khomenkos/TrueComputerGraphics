@@ -9,9 +9,14 @@ namespace TrueComputerGraphics
     {
         static void Main(string[] args)
         {
-            Camera camera = new Camera(new Point(0, 0, 0), new Vector(0, 0, 1), 200, 200, 60);
+            Camera camera = new Camera(new Point(0, 0, -2), new Vector(0, 0, 1), 100, 100, 60);
             Light light = new Light(Vector.Normilize(new Vector(-1, 1, 1)));
+
             Scene.Scene scene = new Scene.Scene(camera, light);
+
+            string path = @" ";
+            ComplexObject objectsasd = new ComplexObject(FileWorker.FileWorker.ReadObject(path));
+            scene.AddObjects(objectsasd.objects);
 
             Sphere sphere = new Sphere(new Point(0, 0, 3), 1);
             scene.AddObject(sphere);
@@ -25,7 +30,8 @@ namespace TrueComputerGraphics
 
             float[,] screen = scene.GetScreen();
 
-
+            string imagePath = @" ";
+            FileWorker.FileWorker.WriteImage(imagePath, screen);
 
 
         }

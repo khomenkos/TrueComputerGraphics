@@ -26,6 +26,15 @@ namespace TrueComputerGraphics.Scene
             objects.Add(newObject);
         }
 
+
+        public void AddObjects(List<IObject> newObjects)
+        {
+            for (int i = 0; i < newObjects.Count; i++)
+            {
+                objects.Add(newObjects[i]);
+            }
+        }
+
         public float[,] GetScreen()
         {
             var w = Camera.Direction;
