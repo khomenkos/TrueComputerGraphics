@@ -14,7 +14,7 @@ namespace TrueComputerGraphics
 
             Scene.Scene scene = new Scene.Scene(camera, light);
 
-            string path = @" ";
+            string path = " ";
             ComplexObject objectsasd = new ComplexObject(FileWorker.FileWorker.ReadObject(path));
             scene.AddObjects(objectsasd.objects);
 
@@ -30,7 +30,7 @@ namespace TrueComputerGraphics
 
             float[,] screen = scene.GetScreen();
 
-            string imagePath = @" ";
+            string imagePath = " ";
             FileWorker.FileWorker.WriteImage(imagePath, screen);
         }
     }
