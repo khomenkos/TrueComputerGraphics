@@ -57,6 +57,11 @@ namespace TrueComputerGraphics.Types
             return (float)(v1.x * v2.x + v1.y * v2.y + v1.z * v2.z);
         }
 
+        public static float GetLenght(Vector u)
+        {
+            return (float)(Math.Sqrt(u * u));
+        }
+
         public static Vector Cross(Vector u, Vector v)
         {
             return new Vector(

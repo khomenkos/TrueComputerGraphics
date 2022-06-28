@@ -21,40 +21,10 @@ namespace TrueComputerGraphics
 
             float[,] screen = scene.GetScreen();
 
-            for (int i = 0; i < camera.width; i++)
-            {
-                for (int j = 0; j < camera.height; j++)
-                {
-                    if (screen[i, j] == 0)
-                    {
-                        Console.Write(' ');
-                    }
-                    else
-                    {
-                        if (screen[i, j] > 0 && screen[i, j] < 0.2)
-                        {
-                            Console.Write('.');
-                        }
-                        else if (screen[i, j] > 0.2 && screen[i, j] < 0.5)
-                        {
-                            Console.Write('*');
-                        }
-                        else if (screen[i, j] > 0.5 && screen[i, j] < 0.8)
-                        {
-                            Console.Write('O');
-                        }
-                        else if (screen[i, j] > 0.8)
-                        {
-                            Console.Write('#');
-                        }
-                        else
-                        {
-                            Console.Write(' ');
-                        }
-                    }
-                }
-                Console.WriteLine();
-            }
+            Triangle triangle = new Triangle(new Point(0, 0, 30), new Point(-2, -2, 30), new Point(-2, 2, 3), new Vector(1, 0, -1), new Vector(1, 0, -1), new Vector(-1, 0, -1));
+            //Triangle triangle = new Triangle(new Point(0, 0, 0), new Point(-2, -2, 0), new Point(-2, 2, 0));
+
+            scene.AddObject(triangle);
         }
     }
 }
