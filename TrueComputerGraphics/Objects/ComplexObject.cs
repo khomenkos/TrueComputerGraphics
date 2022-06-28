@@ -14,5 +14,7 @@ namespace TrueComputerGraphics.Objects
             this.objects = objects;
         }
 
+
     }
 }
+

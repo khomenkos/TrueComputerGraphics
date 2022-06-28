@@ -32,9 +32,6 @@ namespace TrueComputerGraphics
 
             string imagePath = @" ";
             FileWorker.FileWorker.WriteImage(imagePath, screen);
-
-
         }
     }
 }
-
